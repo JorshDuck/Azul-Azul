@@ -1,0 +1,66 @@
+.rotating-image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 16 / 10;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+}
+
+.rotating-image__item {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  opacity: 0;
+  transition: opacity 0.9s ease-in-out, transform 0.9s ease-in-out;
+  transform: scale(1);
+}
+
+.rotating-image__item--active {
+  opacity: 1;
+  transform: scale(1.03);
+}
+
+/* Dots */
+.rotating-image__dots {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.4rem;
+  z-index: 2;
+}
+
+.rotating-image__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(10, 25, 47, 0.45);
+  border: 1.5px solid rgba(255, 255, 255, 0.6);
+  padding: 0;
+  cursor: pointer;
+  transition: background 0.25s, width 0.25s, border-radius 0.25s, border-color 0.25s;
+}
+
+.rotating-image__dot:hover {
+  background: rgba(10, 25, 47, 0.75);
+  border-color: rgba(255, 255, 255, 0.9);
+}
+
+.rotating-image__dot--active {
+  background: #0a192f;
+  border-color: #ffffff;
+  width: 24px;
+  border-radius: 4px;
+}
+
+@media (max-width: 640px) {
+  .rotating-image {
+    aspect-ratio: 16 / 9;
+  }
+}

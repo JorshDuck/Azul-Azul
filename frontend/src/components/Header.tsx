@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import '../styles/Header.css';
-import logo from '../../public/img/logo-main.png'
+import logo from '/img/logo-main.png'
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -37,7 +37,7 @@ function Header() {
     <header className="header" ref={headerRef}>
       <div className="header__container">
         {/* Logo */}
-        <Link to="/main" className="header__logo" onClick={closeMenu}>
+        <Link to="/" className="header__logo" onClick={closeMenu}>
           <img src={logo} alt="Azul Azul" className='header__logo-img'/>
         </Link>
 
@@ -55,10 +55,9 @@ function Header() {
 
         {/* ===== Navbar =====*/}
         <nav className={`header__nav ${menuOpen ? 'header__nav--open' : ''}`}>
-          <Link to="/main" onClick={closeMenu}>Inicio</Link>
-          <Link to="/contacto" onClick={closeMenu}>Eventos</Link>
-          <Link to="/contacto" onClick={closeMenu}>Eventos</Link>
-          <Link to="/contacto" onClick={closeMenu}>Tour Virtual</Link>
+          <Link to="/" onClick={closeMenu}>Inicio</Link>
+          <Link to="/servicios" onClick={closeMenu}>Servicios</Link>
+          <Link to="/eventos" onClick={closeMenu}>Eventos</Link>
           <Link to="/contacto" onClick={closeMenu}>Contáctanos</Link>
         </nav>
       </div>

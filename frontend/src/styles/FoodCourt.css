@@ -1,0 +1,579 @@
+/* Page wrapper */
+.food-court {
+  width: 100%;
+}
+
+/* Hero */
+.food-court__hero {
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background-color: #0a192f;
+}
+
+.food-court__hero-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.food-court__hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(10, 25, 47, 0.94) 0%,
+    rgba(10, 25, 47, 0.80) 40%,
+    rgba(10, 25, 47, 0.40) 70%,
+    rgba(10, 25, 47, 0.15) 100%
+  );
+  z-index: 1;
+}
+
+.food-court__hero-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 6rem 1.5rem;
+}
+
+.food-court__hero-inner {
+  max-width: 620px;
+  text-align: left;
+  color: #ffffff;
+}
+
+.food-court__back-link {
+  display: inline-flex;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin-bottom: 1.5rem;
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
+}
+
+.food-court__back-link:hover {
+  color: #64ffda;
+  border-color: rgba(100, 255, 218, 0.4);
+  background: rgba(100, 255, 218, 0.06);
+}
+
+.food-court__hero-badge {
+  display: block;
+  width: fit-content;
+  background: rgba(100, 255, 218, 0.1);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(100, 255, 218, 0.3);
+  color: #64ffda;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  margin-bottom: 1.5rem;
+}
+
+.food-court__hero-title {
+  font-size: clamp(2rem, 4.5vw, 3.25rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.5px;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.45);
+}
+
+.food-court__hero-subtitle {
+  font-size: clamp(1rem, 1.4vw, 1.15rem);
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 560px;
+  margin: 0 0 2rem;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.4);
+}
+
+.food-court__hero-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.food-court__hero-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.9rem 1.75rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+}
+
+.food-court__hero-btn--primary {
+  background: #64ffda;
+  color: #0a192f;
+}
+
+.food-court__hero-btn--primary:hover {
+  background: #4de8c2;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(100, 255, 218, 0.35);
+}
+
+.food-court__hero-btn--secondary {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1.5px solid rgba(255, 255, 255, 0.35);
+  color: #ffffff;
+  backdrop-filter: blur(8px);
+}
+
+.food-court__hero-btn--secondary:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Sections */
+.food-court-section {
+  padding: 5rem 1.5rem;
+  background: #ffffff;
+  scroll-margin-top: 90px;
+}
+
+.food-court-section--alt {
+  background: #f8fbfd;
+}
+
+.food-court-section__container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.food-court-section__header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 3rem;
+}
+
+.food-court-section__badge {
+  display: inline-block;
+  background: #e0f4ff;
+  color: #0077b6;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  margin-bottom: 1rem;
+}
+
+.food-court-section__title {
+  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+}
+
+.food-court-section__subtitle {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #555555;
+}
+
+/* Brand cards */
+.food-court-brands {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.brand-card {
+  background: #ffffff;
+  border: 1px solid #e8eef3;
+  border-radius: 20px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(0, 119, 182, 0.15);
+  border-color: #90e0ef;
+}
+
+.brand-card__image {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+}
+
+.brand-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.brand-card:hover .brand-card__image img {
+  transform: scale(1.06);
+}
+
+.brand-card__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(10, 25, 47, 0.7) 0%,
+    rgba(10, 25, 47, 0.2) 50%,
+    transparent 100%
+  );
+}
+
+.brand-card__icon {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.95);
+  color: #0077b6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.brand-card__body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.brand-card__title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin-bottom: 0.25rem;
+}
+
+.brand-card__tagline {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #0077b6;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.75rem;
+}
+
+.brand-card__desc {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #666666;
+  margin: 0 0 1rem;
+  flex: 1;
+}
+
+.brand-card__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #0077b6;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: color 0.2s, gap 0.2s;
+}
+
+.brand-card:hover .brand-card__cta {
+  color: #00b4d8;
+  gap: 0.75rem;
+}
+
+.brand-card__arrow {
+  transform: rotate(180deg);
+}
+
+/* Menu brand */
+.menu-brand {
+  margin-bottom: 4rem;
+  scroll-margin-top: 90px;
+}
+
+.menu-brand:last-of-type {
+  margin-bottom: 2rem;
+}
+
+/* Banner */
+.menu-brand__banner {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  aspect-ratio: 16 / 6;
+  margin-bottom: 2rem;
+}
+
+.menu-brand__banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.menu-brand__banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(10, 25, 47, 0.9) 0%,
+    rgba(10, 25, 47, 0.5) 50%,
+    rgba(10, 25, 47, 0.2) 100%
+  );
+}
+
+.menu-brand__banner-content {
+  position: absolute;
+  bottom: 2rem;
+  left: 2.5rem;
+  color: #ffffff;
+}
+
+.menu-brand__banner-tagline {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #64ffda;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+
+.menu-brand__banner-title {
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 800;
+  color: #ffffff;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+  margin: 0;
+}
+
+/* Plain title (no banner) */
+.menu-brand__title-plain {
+  padding: 2rem 0 1.5rem;
+  border-bottom: 2px solid #e8eef3;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.menu-brand__title-plain .menu-brand__banner-tagline {
+  color: #0077b6;
+}
+
+.menu-brand__title-plain .menu-brand__banner-title {
+  color: #1a1a1a;
+  text-shadow: none;
+}
+
+/* Categories */
+.menu-brand__categories {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.menu-category {
+  background: #ffffff;
+  border: 1px solid #e8eef3;
+  border-radius: 16px;
+  padding: 1.75rem;
+}
+
+.menu-category__title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #0077b6;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid #e0f4ff;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.menu-category__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px dashed #e8eef3;
+}
+
+.menu-item:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.menu-item__icon {
+  flex-shrink: 0;
+  width: 45px;
+  height: 45px;
+  border-radius: 10px;
+  background: #f0f8ff;
+  color: #0077b6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  margin-top: 2px;
+}
+
+.menu-item__info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  flex: 1;
+  min-width: 0;
+}
+
+.menu-item__name {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  line-height: 1.35;
+}
+
+.menu-item__desc {
+  font-size: 0.85rem;
+  line-height: 1.45;
+  color: #777777;
+}
+
+.menu-item__price {
+  flex-shrink: 0;
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #0077b6;
+  white-space: nowrap;
+}
+
+/* Note */
+.menu-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  background: #ffffff;
+  border: 1px solid #e8eef3;
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  margin-top: 2rem;
+}
+
+.menu-note__icon {
+  color: #ea4335;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.menu-note__text {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #666666;
+  margin: 0;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .food-court-brands {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .menu-brand__categories {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .menu-brand__banner {
+    aspect-ratio: 16 / 8;
+  }
+
+  .menu-brand__banner-content {
+    bottom: 1.25rem;
+    left: 1.5rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .food-court__hero {
+    min-height: 75vh;
+  }
+
+  .food-court__hero-overlay {
+    background: rgba(10, 25, 47, 0.78);
+  }
+
+  .food-court__hero-content {
+    padding: 4rem 1.25rem;
+  }
+
+  .food-court__hero-actions {
+    flex-direction: column;
+  }
+
+  .food-court__hero-btn {
+    width: 100%;
+  }
+
+  .food-court-section {
+    padding: 3.5rem 1.25rem;
+  }
+
+  .menu-brand__banner {
+    aspect-ratio: 16 / 10;
+    border-radius: 14px;
+  }
+
+  .menu-brand__banner-content {
+    bottom: 1rem;
+    left: 1rem;
+    right: 1rem;
+  }
+
+  .menu-category {
+    padding: 1.25rem;
+  }
+
+  .brand-card__body {
+    padding: 1.25rem;
+  }
+}
