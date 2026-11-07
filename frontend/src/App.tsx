@@ -17,7 +17,7 @@ import './App.css';
 function App() {
   return (
     // basename='/Azul-Azul/'
-    <BrowserRouter basename='/Azul-Azul/'> 
+    <BrowserRouter> 
       <ScrollToTop />
       <div className="app">
         <Header />
